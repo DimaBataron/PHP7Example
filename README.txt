@@ -5,4 +5,5 @@
 1.Example.html -структура HTML                  Гоше
 2.Example2.html - применение СSS                Гоше
 3.Form.html - поля ввода.                       PHP7 Котеров Симдянов
+4.Example3.html - иллюстрация псевдокласов      Гоше
 
