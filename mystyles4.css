@@ -1,0 +1,101 @@
+/* Универсальный селектор* общее правило CSS */
+*{
+	margin: 0px; /* внутренние поля нулевой ширины(пространство вокруг элемента) */
+	padding: 0px; /* внешние поля */
+}
+/* Определяем стили заголовка */
+h1 {
+	font: bold 20px verdana,sans-serif; /* начертание, размер и семейство шр */
+}
+h2 {
+	font: bold 14px verdana, sans-serif
+}
+/* Описание блочных элементов */
+header,section,footer,aside,nav,article,figure,figcaption,hgroup
+{
+	display: block;
+}
+/* выравнивание тела документа по центру */
+body /* по умолчанию body 100% */
+{
+	text-align: center; /* выравнивание текста */
+}
+/* создание главного блока */
+#wrapper { /* ссылается на элемент по значению его атрибута div */
+	width: 960px; /* ширина */
+	margin: 15px auto; /* верхнее и нижнее (внутреннее) поле, для левого
+	 и правого автоматически */
+	text-align: left;
+}
+/* элементам внутри главного блока выделяется не более 960px;
+добавление стилей для элеента <header> */
+#main_header{
+	background: #FFFBB9; /* фон */
+	border: 1px solid #999999; /* рамка */
+	padding: 20px; /* нешние поля */
+}
+/* навигационная полоса <nav>*/
+#main_menu
+{
+	background: #CCCCCC;
+	padding: 5px 15px;
+}
+#main_menu li {
+	display: inline-block; /* превращаем блоки в строчные */
+	list-style: none; /* убрали маркеры */
+	padding: 5px; 
+	font: bold 14px verdana,sans-serif;
+}
+/* c помощью свойства float блоки можно поместить у левого или 
+правого края */
+#main_section{
+	float: left;
+	width: 660px;
+	margin: 20px;
+}
+#main_aside {
+	float: left;
+	width: 220px;
+	margin: 20px 0px;
+	padding: 20px; /* внешние поля */
+	background: #CCCCCC;
+}
+#main_footer {
+	clear: both; /* запрещает отображение сбоку от плавающего блока 
+	both элемент следует обычному потоку не должен считаться поавающим*/
+	text-align: center;
+	padding: 20px;
+	border-top: 2px solid #999999 /* рамка вверху */
+}
+article {
+	background: #FFFBCC;
+	border: 1px solid #999999;
+	padding: 20px;
+	margin-bottom: 15px; /*нижнее внутреннее поле */
+}
+article footer {
+	text-align: right;
+}
+time {
+	color: #999999; /* цвет текста time */
+}
+figcaption {
+	font: italic 14px verdana,sans-serif;
+}
+/* возможность учесть забивку и рамку внутри документа */
+/*
+div {
+	width: 100px;
+	margin: 20px;
+	padding: 10px;
+	border: 1px solid #000000;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing: border-box;
+}
+/* свойтво box-sizing может принимать два значения по умолчанию 
+content-box означает что браузеры прибавляют значения padding и border
+ к размеру, задаваемому свойством  width .
+ если указать border-box , то поведение изменится: забивка
+и рамка будут учитываться в размере самого элемента.
+*/
